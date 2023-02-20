@@ -32,46 +32,35 @@ pipeline {
 
         stage('S2_22053123') {
             steps {
-		echo "S2_22053123"
+				echo "S2_22053123"
             }
         }
 
-		stage('Environment Analysis'){
+		stage('S3_22053123 and S4_22053123'){
 			parallel{
-				stage('Printing all Global Variable'){
+				stage('S3_22053123'){
 					steps{
-						sh """
-						env
-						"""
+						echo "S4_22053123"
 					}
 				}
 				
-				stage('Execute Shell'){
+				stage('S4_22053123'){
 					steps{
-						sh 'echo "Hello Student. Thanks for Keeping up"'
-					}
-				}
-				
-				stage('Print ENV variable'){
-					steps{
-						sh "echo ${APP_ENV}"
+						echo "S5_22053123"
 					}
 				}
 			}
 		}
 		
-        stage('Code Build') {
+        stage('S5_22053123') {
             steps {
-                 //sh 'mvn install -Dmaven.test.skip=true'
-		 echo "Code build"
+				echo "S5_22053123"
             }
         }
 
-        stage('Printing All Global Variables') {
+        stage('S6_22053123') {
             steps {
-                sh """
-                env
-                """
+                echo "S6_22053123"
             }
         }
 
