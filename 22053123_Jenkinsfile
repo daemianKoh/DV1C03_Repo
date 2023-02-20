@@ -26,13 +26,13 @@ pipeline {
         
         stage('S1_22053123') {
             steps {
-                echo "S1_22053123"
+                echo "S1_22053123: Environment Preparation Completed"
             }
         }
 
         stage('S2_22053123') {
             steps {
-				echo "S2_22053123"
+				echo "S2_22053123: Web Server Creation Completed"
             }
         }
 
@@ -40,13 +40,13 @@ pipeline {
 			parallel{
 				stage('S3_22053123'){
 					steps{
-						echo "S4_22053123"
+						echo "S3_22053123: API Test Completed"
 					}
 				}
 				
 				stage('S4_22053123'){
 					steps{
-						echo "S5_22053123"
+						echo "S4_22053123L DAST Security Test Completed"
 					}
 				}
 			}
