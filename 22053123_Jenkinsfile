@@ -35,12 +35,12 @@ pipeline {
 
         stage('Code Checkout') {
             steps {
-				echo "hello world."
-                /*checkout([
-                    $class: 'GitSCM', 
-                    branches: [[name: '*/main']], 
-                    userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
-                ])*/
+		echo "hello world."
+                //checkout([
+                    //$class: 'GitSCM', 
+                    //branches: [[name: '*/main']], 
+                    //userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
+                //])
             }
         }
 
