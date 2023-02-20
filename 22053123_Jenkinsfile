@@ -24,23 +24,15 @@ pipeline {
 
     stages {
         
-        stage('Cleanup Workspace') {
+        stage('S1_22053123') {
             steps {
-                cleanWs()
-                sh """
-                echo "Cleaned Up Workspace for ${APP_NAME}"
-                """
+                echo "S1_22053123"
             }
         }
 
-        stage('Code Checkout') {
+        stage('S2_22053123') {
             steps {
-		echo "hello world."
-                //checkout([
-                    //$class: 'GitSCM', 
-                    //branches: [[name: '*/main']], 
-                    //userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
-                //])
+		echo "S2_22053123"
             }
         }
 
