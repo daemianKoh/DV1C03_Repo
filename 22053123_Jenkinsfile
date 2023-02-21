@@ -61,7 +61,6 @@ pipeline {
         stage('S6_22053123') {
 			when{
 				not{
-					currentBuild.result = 'ABORTED'
 					error('Abort release')
 				}
 			}
