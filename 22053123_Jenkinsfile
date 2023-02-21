@@ -61,7 +61,8 @@ pipeline {
         stage('S6_22053123') {
 			when{
 				not{
-					echo "Abort"
+					currentBuild.result = 'ABORTED'
+					error('Abort release')
 				}
 			}
             steps {
