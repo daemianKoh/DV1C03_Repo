@@ -32,6 +32,13 @@ pipeline {
 
         stage('S2_22053123') {
             steps {
+			
+				if [ $( docker ps -a -f name=S2_22053123_Server | wc -l ) -eq 2 ]; then
+					echo "S2_22053123_Server exists"
+				else
+					echo "S2_22053123_Server does not exist"
+				fi
+
 				echo "S2_22053123: Web Server Creation Completed"
             }
         }
