@@ -32,16 +32,16 @@ pipeline {
 
         stage('S2_22053123') {
             steps {
-				def containerExist = sh "docker ps -a | grep -c 22053123_svr"
-				
-				if(containerExist == 1){
-					echo "S2_22053123_Server exists"
+				script{
+					def containerExist = sh "docker ps -a | grep -c 22053123_svr"
+					if(containerExist == 1){
+						echo "S2_22053123_Server exists"
+					}
+					else
+					{
+						echo "S2_22053123_Server does not exist"
+					}
 				}
-				else
-				{
-					echo "S2_22053123_Server does not exist"
-				}
-
 				echo "S2_22053123: Web Server Creation Completed"
             }
         }
