@@ -60,7 +60,9 @@ pipeline {
 
         stage('S6_22053123') {
             when{
-				echo "hello";
+				not{
+					branch 'main'
+				}
 			}
 			steps {
                 echo "Work Released - 22053123"
