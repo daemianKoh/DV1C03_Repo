@@ -34,7 +34,7 @@ pipeline {
             steps {
 				script{
 					echo "hello!!!!!"
-					def containerExist = sh(script:"docker ps -a | grep -c 22053123_svr")
+					def containerExist = sh(script:"docker ps --filter 'name=22053123_svr' -q", returnStdout:true).trim()
 					if(containerExist == 1){
 						echo "S2_22053123_Server exists"
 					}
