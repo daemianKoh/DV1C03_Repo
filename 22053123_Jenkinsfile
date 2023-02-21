@@ -59,11 +59,6 @@ pipeline {
         }
 
         stage('S6_22053123') {
-			when{
-				not{
-					error('Abort release')
-				}
-			}
             steps {
                 echo "Work Released - 22053123"
             }
