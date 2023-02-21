@@ -61,7 +61,7 @@ pipeline {
         stage('S6_22053123') {
             when{
 				not{
-					branch 'main'
+					branch 'master'
 				}
 			}
 			steps {
