@@ -33,8 +33,8 @@ pipeline {
         stage('S2_22053123') {
             steps {
 				script{
-					echo "hello!!!!!"
-					def containerExist = sh(script:"docker ps --filter 'name=22053123_svr' -q", returnStdout:true).trim()
+					sh "docker rm -f S2_22053123_Server"
+                			sh "docker run -d --name S2_22053123_Server -p 42000:80 22053123_webimage"
 				}
 				echo "S2_22053123: Web Server Creation Completed"
             }
