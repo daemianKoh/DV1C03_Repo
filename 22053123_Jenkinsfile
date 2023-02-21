@@ -59,7 +59,10 @@ pipeline {
         }
 
         stage('S6_22053123') {
-            steps {
+            when{
+				echo "hello";
+			}
+			steps {
                 echo "Work Released - 22053123"
             }
         }
