@@ -54,13 +54,18 @@ pipeline {
 		
         stage('S5_22053123') {
             steps {
-				echo "S5_22053123"
+				input("Do you want to release the work?")
             }
         }
 
         stage('S6_22053123') {
+			when{
+				not{
+					echo "Abort"
+				}
+			}
             steps {
-                echo "S6_22053123"
+                echo "Work Released - 22053123"
             }
         }
 
